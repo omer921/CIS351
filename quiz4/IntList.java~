@@ -1,0 +1,18 @@
+public class IntList { /////////////////////////////
+  public IntNode head;
+  // Constructor
+  public IntList()               { head = null; }
+  // Other methods
+  public void compress()      { /* see below */ }
+} // end of the IntList class //////////////////////
+public class IntNode { /////////////////////////////
+  private int data;
+  private IntNode link;
+  // Constructor
+public IntNode(int d, IntNode n) { data=d; link=n;
+  }
+  public int getData()
+  public IntNode getLink()
+  public void setData(int d)
+  public void setLink(IntNode n) { link = n; }
+} // end of the IntNode class //////////////////////

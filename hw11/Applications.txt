@@ -1,0 +1,71 @@
+Welcome to DrJava.  Working directory is /Users/OWinrauke/Dropbox/CIS351/hw11
+> run test
+                            20
+                        4
+                            --
+                    7
+                            --
+                        12
+                            6
+
+
+SplitAt 5
+
+
+                                    --
+                                20
+                                        --
+                                    12
+                                        6
+                            4
+                                --
+                        5
+                            7
+
+
+Rotate Right
+
+
+                            --
+                        20
+                                --
+                            12
+                                6
+                    4
+                                    --
+                                20
+                                        --
+                                    12
+                                        6
+                            4
+                                --
+                        7
+                                --
+                            12
+                                6
+
+
+Rotate Left
+
+                                        --
+                                    20
+                                            --
+                                        12
+                                            6
+                                4
+                                    --
+                            7
+                                    --
+                                12
+                                    6
+                        4
+                                --
+                            20
+                                    --
+                                12
+                                    6
+                    7
+                            --
+                        12
+                            6
+> 

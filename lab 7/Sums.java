@@ -1,0 +1,227 @@
+import java.io.*;
+
+public class Sums {
+  public static void main(String argv[]) {
+    
+    Loop0(100,2000,100);
+    
+    Loop1(1000,2000,100);  // change these values to something more reasonable
+    
+    Loop2(100,6000,100);  // change these values to something more reasonable **************
+    
+    Loop3(100,2000,100);  // change these values to something more reasonable
+    
+    Loop4(100,2100,50);  // change these values to something more reasonable
+    
+    Loop5(100,2000,100);  // change these values to something more reasonable 
+  }
+  
+  
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  // LOOP 0 --- an example
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  /**
+   * Run the loop for n = nMin, nMin+nStep, nMin+2*nStep, ... , nMax
+   *    and print the values of n, z (the step count), and z/(some_expression)
+   *    in each step.
+   */
+  public static void Loop0(int nMin, int nMax, int nStep) {
+    int i, j, n;
+    long z;
+    
+    System.out.println("\n\nLoop 0 -- an example");
+    
+    for (n=nMin; n <= nMax; n=n+nStep) {
+      
+      ////////////////////////////////////////
+      // Get a measurement for the value of z
+      i = 1;    
+      z = 0;
+      while (i < 0.5*n*n + 50*n + 3 ) {
+        i++;
+        z++;
+      }
+      ////////////////////////////////////////
+      
+      // Report results
+      System.out.printf("n = %6d   z = %9d   z/n*n = %6.3f\n",
+                        n,z,(double)z/((double) n*n));  
+    }
+    
+    System.out.println("\nNote that z/n*n seems to " +
+                       "be converging to something near 0.5.\n");
+    
+  }
+  
+  
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  // LOOP 1
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  
+  public static void Loop1(int nMin, int nMax, int nStep) {
+    int i, j, n;
+    long z;
+    
+    System.out.println("\n\nLOOP 1");
+    
+    for (n=nMin; n <= nMax; n=n+nStep) {
+      
+      ////////////////////////////////////////
+      // Get a measurement for the value of z
+      i = 1;    z = 0;
+      for (i = 1; i < n; i++)
+        for (j = n; i<j; j--) z++;
+      ////////////////////////////////////////
+      // Report results
+      System.out.println("  n = "    + n +
+                         "  i = "    + i +
+                         "  z = "    + z +
+                         "  z/?? = "  + (double)z/((double) (n*n)) 
+                           // Choose a more interesting ratio than z/1
+                        );
+    }
+  }
+  /* O(n^2) because the limit of this function reaches .5 */
+  
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  // LOOP 2
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  
+  public static void Loop2(int nMin, int nMax, int nStep) {
+    int i, j, n;
+    long z;
+    
+    System.out.println("\n\nLOOP 2");
+    
+    for (n=nMin; n <= nMax; n=n+nStep) {
+      
+      ////////////////////////////////////////
+      // Get a measurement for the value of z
+      i = n;     z = 1;
+      while (i > 0 ) {
+        i = (7*i)/8;
+        z = z + 1;
+      }
+      ////////////////////////////////////////
+      
+      // Report results
+      System.out.println("  n = "    + n +
+                         "  i = "    + i +
+                         "  z = "    + z +
+                         "  z/?? = "  + (double)z/((double) (Math.log(n))) 
+                           // Choose a more interesting ratio than z/1
+                        );
+    }
+  }
+  //O(log n) because it reaches the limit of 6
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  // LOOP 3
+  
+  public static void Loop3(int nMin, int nMax, int nStep) {
+    int i, j, n;
+    double z;  
+    
+    System.out.println("\n\nLOOP 3");
+    
+    
+    for (n=nMin; n <= nMax; n=n+nStep) {
+      
+      ////////////////////////////////////////
+      // Get a measurement for the value of z
+      i = n;    z = 1.0;
+      while (i > 0 ) {
+        i = (7 * i) / 8;
+        z = (8 * z) / 7;
+      }
+      ////////////////////////////////////////
+      
+      // Report results
+      System.out.println("  n = "    + n +
+                         "  i = "    + i +
+                         "  z = "    + z +
+                         "  z/?? = "  + z/((double) ((8*n)/7))
+                           // Choose a more interesting ratio than z/1
+                        );
+    }
+  }
+  
+  // O((8*n)/7) because it reaches a limit of .2
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  // LOOP 4
+  
+  public static void Loop4(int nMin, int nMax, int nStep) {
+    int i, j, n;
+    long z;
+    double logn;
+    
+    System.out.println("\n\nLOOP 4");
+    
+    for (n=nMin; n <= nMax; n=n+nStep) {
+      
+      ////////////////////////////////////////
+      // Get a measurement for the value of z
+      z = 0;
+      for (i=1; i<=n ; i=i*3)
+        for (j=0; j<i; j++) z++;
+      ////////////////////////////////////////
+      
+      // Report results
+      logn = Math.log(n);
+      System.out.println("  n = "    + n +
+                         "  i = "    + i +
+                         "  z = "    + z +
+                         "  z/?? = "  + (double)z/((double) (n*Math.log(n)))
+                           // Choose a more interesting ratio than z/1
+                        );
+    }
+  }
+  // O(n*log(n)) because the limit aproaches .2 as the loop continues
+  
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  // LOOP 5
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  
+  public static void Loop5(int nMin, int nMax, int nStep) {
+    int i, j, k, n;
+    long z;
+    
+    System.out.println("\n\nLOOP 5");
+    
+    for (n=nMin; n <= nMax; n=n+nStep) {
+      
+      ////////////////////////////////////////
+      // Get a measurement for the value of z
+      z = 0;
+      for (i=1; i<=n; i++)
+        for (j=i; j<=n; j++)
+          for (k=1; k<=i+j+1; k++)
+            z = z+1;
+      
+      ////////////////////////////////////////
+      
+      // Report results
+      System.out.println("  n = "    + n +
+                         "  i = "    + i +
+                         "  z = "    + z +
+                         "  z/?? = "  + (double)z/((double) (Math.pow(n,3)))
+                           // Choose a more interesting ratio than z/1
+                        );
+    }
+  }
+  // O(n^3) because it reaches a limit of .5
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+} // end of the class Sums
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+

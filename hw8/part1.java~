@@ -1,0 +1,68 @@
+import java.util.Scanner;
+import java.util.Stack;
+import java.io.*;
+
+public class part1
+{
+  public static void main(String[] args)
+    throws IOException 
+  {
+    postscan("postfix.dat");
+    
+  }
+  public static void postscan(String fileName) 
+    throws FileNotFoundException 
+  {
+    Scanner infile = new Scanner(new File(fileName));
+    String token;
+    Stack<Double> stak = new Stack();
+    double num = 0;
+    boolean quit = false;
+    String ans = "";
+    while (infile.hasNext() && !quit) {
+      token = infile.next();
+      double first, second;
+      switch (Kind.classify(token.charAt(0))) {
+        case NUMBER: 
+          System.out.printf("Number pushed: %10.4f\n", Double.parseDouble(token));
+          stak.push(Double.parseDouble(token));
+          break;
+        case PLUS:
+          first = stak.pop();
+          second = stak.pop();
+          stak.push(first+second);
+          System.out.println("plus " + (first+second));
+          break;
+        case MINUS:
+          second = stak.pop();
+          first = stak.pop();
+          stak.push(first - second);
+          System.out.println("minus " + (first-second));
+          break;
+        case TIMES:
+           second = stak.pop();
+          first = stak.pop();
+          stak.push(first * second);
+          System.out.println("times " + num);
+          break;
+        case DIVIDE:
+          second = stak.pop();
+          first = stak.pop();
+          stak.push(first / second);
+          System.out.println("divide " + num);
+          //System.out.println("Operator:   " + token);
+          break;
+        case ENDEXP:
+          System.out.println("   END OF EXPRESSION");
+          ans += stak.pop() + "\n";
+          //num = 0;
+          System.out.println(ans);
+          break;
+        default:
+          System.out.println("\tEnd of input, I quit!");
+          
+          return;
+      }
+    } 
+  }
+}

@@ -1,0 +1,11 @@
+public class IntNode { /////////////////////////////
+  private int data;
+  private IntNode link;
+  // Constructor
+public IntNode(int d, IntNode n) { data=d; link=n;
+  }
+  public int getData() 
+  public IntNode getLink()
+  public void setData(int d)
+  public void setLink(IntNode n) { link = n; }
+} // end of the IntNode class //////////////////////

@@ -1,0 +1,104 @@
+Welcome to DrJava.  Working directory is /Users/OWinrauke/Dropbox/CIS351/hw10
+> run problems
+about:  173 175
+another:  117
+bands:  132 134 132
+bangs:  135
+battle:  178 203 197 190 189 188 188 184 183 181 180
+battles:  194
+beetle:  178 207 196 190 189 184 181
+beetles:  173 203 194 188 188 183 177 175
+bends:  124 127 126 125
+blibber:  153
+block:  27
+blocks:  19 35 34 23 20
+blubber:  153
+booms:  135
+bottle:  189 203 197 195 194 190
+bottled:  207
+breaks:  128 129
+breeze:  162 163
+brick:  26
+bricks:  18 42 35 34 23 20
+bring:  142
+brings:  121 122
+broom:  121 138 129 128 125 124 122
+brooms:  134
+called:  178
+cheese:  161 164
+chewing:  103
+chewy:  103
+chick:  29
+chicks:  18 48 43 33 33 24 20 19
+choose:  105 106
+clock:  30
+clocks:  20 47 41 40 34 24
+clothes:  73 82 76 75 74
+comes:  69 120 119 71 70
+doing:  104
+duddled:  208
+eating:  195 204
+enough:  168
+fight:  177 194
+first:  26
+fleas:  161 165 162
+freeze:  163 164
+freezy:  162 164 163
+fuddled:  208
+gluey:  101 101
+gooey:  99 103 99
+goose:  104 107
+grows:  86 88
+lakes:  145 151 150 148 147 146
+licks:  147 151 150 148
+likes:  145 151 150 146
+little:  173
+makes:  92
+minute:  201
+mixed:  48
+mouth:  139 142 140
+muddle:  190 196
+muddled:  208
+noodle:  196 207 204
+noodles:  195
+paddle:  184 197 190 188
+paddled:  207
+paddles:  183 204 194
+please:  45 159
+poodle:  195 207 204 196 195
+puddle:  180 204 196 190 189 189 188 184 183 181
+quick:  26 46 30 29 27
+quite:  92
+rubber:  154
+seuss:  1
+shame:  94
+silly:  169
+slick:  46
+sneeze:  165
+socks:  1 210 208 201 78 78 65 64 62 61 59 58 57 56 33 16 14 12 10 5
+something:  96 143
+sorry:  51
+stack:  26 30 29 27
+stuff:  169
+takes:  150 151
+thank:  211
+their:  194 204
+these:  162 194 165 164 163
+thing:  54
+those:  47
+three:  161 165 163 161
+through:  161
+ticks:  37 47
+tocks:  37 48
+tongue:  46 154 92
+trees:  161 164 164 163
+trick:  26 45 32 30 29 27
+tricks:  23 24
+tweetle:  173 207 203 196 190 184 183 181 178 177 175
+where:  203
+while:  162
+whose:  58 75 64 61
+wuddled:  208
+true
+after remove true
+> 

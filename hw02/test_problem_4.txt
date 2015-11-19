@@ -1,0 +1,66 @@
+Welcome to DrJava.  Working directory is /Users/OWinrauke/Dropbox/CIS351/hw02
+> run Hw02
+Problem 1 output
+For a loan of 10000.0 at interest rate 0.08 (APR) for 3 years, 
+  the monthy payment is: 313.3636546143112
+
+For a loan of 10000.0 at interest rate 0.0 (APR) for 3 years, 
+  the monthy payment is: 277.77777777777777
+
+For a loan of 10000.0 at interest rate 0.0 (APR) for 5 years, 
+  the monthy payment is: 166.66666666666666
+
+For a loan of 10000.0 at interest rate 0.0 (APR) for 1 years, 
+  the monthy payment is: 833.3333333333334
+
+For a loan of 10000.0 at interest rate 1.0 (APR) for 6 years, 
+  the monthy payment is: 835.959447239726
+
+For a loan of 10000.0 at interest rate 0.05 (APR) for 10 years, 
+  the monthy payment is: 106.06551523907551
+
+
+Problem 2 output
+1
+2
+6
+24
+
+Problem 3 output
+1
+2
+6
+24
+Problem 4 output
+year =  [DrJava Input Box]
+month =  [DrJava Input Box]
+2/1900 has 29 days
+
+year =  [DrJava Input Box]
+month =  [DrJava Input Box]
+2/2000 has 29 days
+
+year =  [DrJava Input Box]
+month =  [DrJava Input Box]
+2/2004 has 29 days
+
+year =  [DrJava Input Box]
+month =  [DrJava Input Box]
+1/2014 has 31 days
+
+year =  [DrJava Input Box]
+month =  [DrJava Input Box]
+2/2014 has 28 days
+
+year =  [DrJava Input Box]
+month =  [DrJava Input Box]
+9/2014 has 30 days
+
+year =  [DrJava Input Box]
+month =  [DrJava Input Box]
+12/2014 has 31 days
+
+year =  [DrJava Input Box]
+month =  [DrJava Input Box]
+Silly input, terminating
+> 

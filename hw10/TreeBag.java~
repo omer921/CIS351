@@ -1,0 +1,141 @@
+// import edu.colorado.nodes.*;
+
+/**********************************************************
+  * 
+  * <h1>Add documentation</h1>
+  * 
+  **********************************************************/
+import java.util.*;
+@SuppressWarnings("unchecked")
+
+public class TreeBag {
+  ////////////////////////////////////////////////////////
+  /** 
+   * <h1>Add documentation</h1>
+   **/
+  protected TNode<StringOcc> root;
+  
+  
+  ////////////////////////////////////////////////////////
+  /** 
+   * <h1>Add documentation</h1>
+   **/
+  public TreeBag() {
+    root = null;
+  }
+  
+  
+  ////////////////////////////////////////////////////////
+  /** 
+   * <h1>Add documentation</h1>
+   **/
+  
+  public void add(StringOcc  str) {
+    if (str==null)  return;
+    
+    if(!exist(root, str))
+    {
+      root = addHelp(root,str,root);
+      //System.out.println("Does not exist: " + str); 
+    }
+    else
+    {
+      //System.out.println("exists adding the numbers to " + str);
+      
+      TNode<StringOcc> tNode = findNode(root, str); 
+      Node nNode = str.head;
+      tNode.getData().head.addNodeAfter(str.head.getData());
+      //System.out.println("this is now " + tNode.getData());
+    }
+  }
+  
+  public TNode findNode(TNode root, StringOcc str)
+  {
+    TNode ans = null;
+    if (root == null){
+      ans = null;
+      return ans; 
+    }
+    
+    String r = "" + root.getData();
+    String s = "" + str;
+    Scanner scanR = new Scanner(r);
+    Scanner scanS = new Scanner(s);
+    int rS = r.indexOf(':');
+    int sS = s.indexOf(':');
+
+    if (r.substring(0,rS).equals(s.substring(0,sS))){
+      //System.out.println("found the node returning");
+      ans = root;
+      return ans;
+    }
+    
+    else
+    {
+      if (findNode(root.getLeft(), str) != null)
+        ans = findNode(root.getLeft(), str);
+      else
+        ans = findNode(root.getRight(), str);
+    }
+    
+    return ans;
+  }
+  
+  
+  public boolean exist(TNode root, StringOcc str)
+  {
+    boolean ans = false;
+    if (root == null)
+      return false;
+    else
+    {
+      String r = "" + root.getData();
+      String s = "" + str;
+      Scanner scanR = new Scanner(r);
+      Scanner scanS = new Scanner(s);
+      int rS = r.indexOf(':');
+      int sS = s.indexOf(':');
+      //System.out.println (root.getData());
+      //System.out.println("checking " + r.substring(0,rS) + " vs " + s.substring(0,sS));
+      if (r.substring(0,rS).equals(s.substring(0,sS))){
+        //System.out.println("this exists " + str);
+        return true;
+      }
+      else
+      {
+        //System.out.println("recuring again");
+        return exist(root.getLeft(), str) || exist(root.getRight(), str);
+        
+      }
+    }
+    //return ans;
+  }
+  
+  private TNode<StringOcc> addHelp(TNode<StringOcc> nd, 
+                                   StringOcc        str, 
+                                   TNode<StringOcc> mom)  {
+    if (nd == null)
+      return new TNode<StringOcc>(str,mom,null,null);
+    
+    int comp = (nd.getData()).compareTo(str);
+    
+    if (comp < 0)      // nd.data << str
+      nd.setRight(addHelp(nd.getRight(),str,nd));
+    else if (comp > 0) // nd.data >> str
+      nd.setLeft(addHelp(nd.getLeft(),str,nd));
+    else               // nd.data ==== str       
+      /* do nothing  */;
+    
+    return nd;
+  }
+  
+  
+  ////////////////////////////////////////////////////////
+  /** 
+   * <h1>Add documentation</h1>
+   **/
+  public TWalker iterator() {
+    /* fill in */
+    return new TWalker(this);
+  }
+}

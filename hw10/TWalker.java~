@@ -1,0 +1,72 @@
+import java.util.Iterator;
+import java.util.*;
+/**********************************************************
+ * 
+ * <h1>Add documentation</h1>
+ * 
+ **********************************************************/
+
+public class TWalker implements Iterator {
+  ////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////
+  //
+  // Add documentation
+  //
+
+  // Instance variables
+   TreeBag bag; // the bag
+   TNode root; // the main node
+   TNode left;
+   TNode right;
+   //E data;
+   TNode parent;
+  /** <h1>Add documentation</h1> */
+
+
+  public TWalker(TreeBag bag){
+    /* fill in */
+    bag = bag;
+    root = bag.root;
+    left = bag.root.getLeft();
+    right = bag.root.getRight();
+    parent = null;
+    
+  }
+
+  ////////////////////////////////////////////////////////
+  /** 
+   * <h1>Add documentation</h1>
+   **/
+    
+  public boolean hasNext() {
+    return ((root.getRight() != null)||(root.getLeft() != null)); // FIX
+  }
+    
+  ////////////////////////////////////////////////////////
+  /** 
+   * <h1>Add documentation</h1>
+   **/
+    
+  public Object next() {
+    if (!hasNext()) throw new NoSuchElementException();
+    Object ans = root.getSuccessor();
+    if (parent!=null) parent = root.getPredecessor();
+    
+    return ans; // FIX **********
+  }
+    
+  ////////////////////////////////////////////////////////
+  /** 
+   * <h1>Add documentation</h1>
+   **/
+  
+  public void remove() {
+    if (parent!=null){
+      if(parent != null)
+      bag.root = parent.getRight();
+      else
+        parent.removeRightmost();
+    }
+    //return; 
+  }
+}

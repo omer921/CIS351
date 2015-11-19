@@ -1,0 +1,60 @@
+import java.util.Scanner;
+import java.util.Stack;
+import java.io.*;
+
+@SuppressWarnings("unchecked")
+public class part2
+{
+  public static void main(String[] args) throws IOException 
+  {
+    {
+      Scanner infile = new Scanner(new File("infix.dat")); 
+      
+      System.out.println(inscanLine(infile));
+    }
+  }
+    
+    public static String inscanLine(Scanner infile) {
+      String ans = "";
+      String token;
+      Boolean quit = false;
+      int num;
+      Stack stak = new Stack();
+      while (infile.hasNext() && !quit) {
+        token = infile.next();
+      switch(Kind.classify(token.charAt(0))) {
+        case NUMBER:
+          num = Integer.valueOf(token);
+          ans += num + " ";
+          break;
+        case PLUS:     
+        case MINUS:     
+        case TIMES:     
+        case DIVIDE:     
+          //System.out.println("Operator:    " + token );
+          stak.push(token);
+          break;
+        case SYMBOL:    
+        case OPENPAR:
+          break;
+        case CLOSEPAR:
+          if (!stak.isEmpty())
+            ans +=stak.pop() + " ";
+          break;     
+        case SPACE:
+          break;
+        case ENDEXP:
+          infile.nextLine();
+          ans += "\n";
+          break;
+        case ENDINPUT:
+          quit = true;
+          break;
+        default:
+          break;
+      }
+      }
+      return ans;
+    }
+  }
+    

@@ -1,0 +1,49 @@
+Welcome to DrJava.  Working directory is /Users/OWinrauke/Desktop/hw8
+> run part1
+Number pushed:     2.0000
+Number pushed:     3.0000
+Number pushed:     2.0000
+   END OF EXPRESSION
+Number pushed:     1.0000
+Number pushed:     3.0000
+Number pushed:     2.0000
+   END OF EXPRESSION
+Number pushed:     6.0000
+Number pushed:     9.0000
+Number pushed:     7.0000
+   END OF EXPRESSION
+Number pushed:     1.0000
+Number pushed:     1.0000
+Number pushed:     6.0000
+Number pushed:     3.0000
+   END OF EXPRESSION
+Number pushed:    45.0000
+Number pushed:     3.0000
+Number pushed:     5.0000
+Number pushed:     2.0000
+   END OF EXPRESSION
+Number pushed:     3.4880
+Number pushed:     3.1400
+Number pushed:     4.0000
+Number pushed:     5.0000
+   END OF EXPRESSION
+Number pushed:     2.0000
+Number pushed:     3.0000
+Number pushed:     4.0000
+Number pushed:     6.0000
+Number pushed:     5.0000
+Number pushed:     3.0000
+Number pushed:     3.0000
+Number pushed:     4.0000
+Number pushed:     5.0000
+   END OF EXPRESSION
+	End of input, I quit!
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+
+> 
